@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CalmPlan Pro</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header>
+            <h1 id="viewTitle">Today</h1>
+            <div id="headerDate">Jan 08, 2026</div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="content">
+            <!-- Content dynamically injected here -->
+        </main>
+
+        <!-- Input Bar (Brain Dump) -->
+        <div class="input-container">
+            <div class="bar">
+                <input type="text" id="taskInput" placeholder="Pay bills tomorrow..." autocomplete="off">
+                <button id="addBtn">Add</button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="bottom-nav">
+            <button onclick="setView('today')" id="nav-today">Today</button>
+            <button onclick="setView('upcoming')" id="nav-upcoming">Upcoming</button>
+            <button onclick="setView('journal')" id="nav-journal">Journal</button>
+            <button onclick="setView('calendar')" id="nav-calendar">Calendar</button>
+            <button onclick="setView('done')" id="nav-done">Done</button>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "CalmPlan Pro",
+  "short_name": "CalmPlan",
+  "description": "A minimal, private personal planner and journal.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/10691/10691830.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
